@@ -12,7 +12,6 @@ class ProductListView(ListView):
 
 
 class ProductDetailView(DetailView):
-    queryset = Product.objects.select_related("name", "description")
     model = Product
     context_object_name = 'products'
     template_name = "products/product_detail.html"
